@@ -8,7 +8,7 @@
                 <div class="col-md-4 mb-3">
                     <h1>{{ $post->title }}</h1>
                     <p>
-                        {{ substr($post->content, 0, 200) }}
+                        {!! substr($post->content, 0, 200) !!}
                     </p>
                     <a href="{{ url("post/$post->id") }}" class="btn btn-primary">Read more...</a>
                 </div>

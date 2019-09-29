@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-10">
                 <h1>{{ $post->title }}</h1>
-                <p>{{ $post->content }}</p>
+                <p>{!! $post->content  !!}</p>
             </div>
         </div>
         <div class="row">

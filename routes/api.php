@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Category;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,34 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route:: get('cat', function(){
+    return Category::all();
+});
+
+//Route::post('cat', 'Api/CategoryController@post');
+
+//Route::post('cat', function (Request $req){
+//
+//    $cat = new Category();
+//    $cat->name = $req->name;
+//    $cat->save();
+//
+//    return 'created';
+//});
+//
+//Route::put('cat/{id}', function (Request $req, $id){
+//
+//    $cat = Category::find($id);
+//    $cat->name = $req->name;
+//    $cat->save();
+//
+//    return'updated';
+//});
+//
+//Route::delete('cat/{id}', function(Request $req, $id){
+//
+//    $cat = Category::find($id)->delete();
+//
+//    return 'deleted';
+//});
