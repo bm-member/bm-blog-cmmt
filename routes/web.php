@@ -22,3 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 require 'admin.php';
 
+Route::get('/foo', function(){
+    return 'foo';
+});
